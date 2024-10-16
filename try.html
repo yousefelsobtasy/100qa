@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Frame</title>
+    <style>
+        :root {
+            --red: tomato;
+            --bgColor: bisque;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            background-color: var(--bgColor);
+        }
+
+        .text.framed {
+            padding: 20px;
+            box-shadow:
+                -50px -50px 0 -40px var(--red),
+                50px 50px 0 -40px var(--red);
+        }
+    </style>
+</head>
+
+<body dir="rtl">
+    <div class="text framed">
+        <h3>ما هو الإسلام؟</h3>
+        <h2>الإسلام هو الاستسلام لله بالتوحيد والانقياد له بالطاعة</h2>
+    </div>
+</body>
+
+</html>
