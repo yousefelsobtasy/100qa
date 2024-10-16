@@ -2,26 +2,33 @@ export const qa = [
     {
         id: 1,
         question: "لماذا ندرس التوحيد",
-        textAnswer: "ج/ لأنه أصل الأصول، ومن أجله خلق الله الجنَّ والإنس، وأرسل الله الرسل، وأنزل الكتب، وقام سوق الجنة والنار، وانقسم الناس إلى مسلمين وكفار.",
+        textAnswer: "لأنه أصل الأصول، ومن أجله خلق الله الجنَّ والإنس، وأرسل الله الرسل، وأنزل الكتب، وقام سوق الجنة والنار، وانقسم الناس إلى مسلمين وكفار",
         ayaAnswer: "قال الله تعالى: \"وما خلقت الجن والإنس إلا ليعبدون\" (الذاريات: 56).",
-        ayaImgAnswer: "/img-answer-1.png"
+        ayaImgAnswer: "/img-answer-1.png",
+        qaImg: "/qa-1.png"
     },
     {
         id: 2,
-        question: "What is the meaning of life?",
-        textAnswer: "43",
-        imgAnswer: ""
+        question: "من أين نأخذ عقيدتنا",
+        textAnswer: "من القرآن والسنة وما كان عليه سلف الأمة",
+        ayaAnswer: "",
+        ayaImgAnswer: "",
+        qaImg: "/qa-2.png"
     },
     {
         id: 3,
-        question: "What is the meaning of life?",
-        textAnswer: "44",
-        imgAnswer: ""
+        question: "ما الأصول الثلاثة التي يجب على الإنسان معرفتها والتي يسأل عنها في قبره",
+        textAnswer: "من القرآن والسنة وما كان عليه سلف الأمة",
+        ayaAnswer: "",
+        ayaImgAnswer: "",
+        qaImg: "/qa-3.png"
     },
     {
         id: 4,
-        question: "What is the meaning of life?",
-        textAnswer: "45",
-        imgAnswer: ""
+        question: "من ربك",
+        textAnswer: "ربي الله الذي رباني وربى جميع العالمين بنعمه، وهو معبودي ليس لي معبود سواه، والدليل قوله تعالى :",
+        ayaAnswer: "\"الحمد لله رب العالمين\" (الفاتحة: 2)",
+        ayaImgAnswer: "/img-answer-4.png",
+        qaImg: "/qa-4.png"
     }
 ];

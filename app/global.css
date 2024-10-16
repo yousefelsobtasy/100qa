@@ -3,16 +3,49 @@
     --bgColor: bisque;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+.notReady {
+    background-color: black;
+    font-size: 2rem;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
 body {
     display: grid;
     place-items: center;
     height: 100vh;
+    padding: 20px;
     background-color: var(--bgColor);
+
+    h1 {
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 3rem;
+    }
 }
 
 .questionAndAnswer {
     padding: 20px;
     box-shadow:
-        -50px -50px 0 -40px var(--red),
-        50px 50px 0 -40px var(--red);
+        -10px -10px var(--red),
+        10px 10px var(--red);
+
+    .question {
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 10px;
+    }
+
+    .answer,
+    .ayaAnswer {
+        font-size: 2rem;
+        margin: 30px 10px;
+    }
 }
