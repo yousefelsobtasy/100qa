@@ -30,11 +30,11 @@ const QuestionAndAnswer = () => {
     }, [qaIndex]);
 
     return (
-        <div>
+        <div className='qa-content'>
             {qaData ? (
                 <>
-                    <StartPause isPaused={isPaused} setIsPaused={setIsPaused} /> {/* Adjusted prop name */}
-                    <h1>100/<span className={`questionId`}>{qaData.id}</span></h1>
+                    <StartPause isPaused={isPaused} setIsPaused={setIsPaused} />
+                    <h2>100/<span className={`questionId`}>{qaData.id}</span></h2>
                     <div className='questionAndAnswer'>
                         <div className='question'>{qaData.question}</div>
                         <div className='answer'>{qaData.textAnswer}</div>
