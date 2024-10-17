@@ -21,7 +21,7 @@ const QuestionAndAnswer = () => {
         }
 
         // Cleanup interval on component unmount
-        return () => clearInterval(intervalId);
+        return () => { clearInterval(intervalId) };
     }, [isPaused]);
 
     // Fetch new question data when qaIndex changes
