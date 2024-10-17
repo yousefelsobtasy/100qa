@@ -58,7 +58,6 @@ h1 {
 h1:hover {
     color: orange;
     transform: translateY(-5px);
-    /* Adds slight hover lift */
 }
 
 @keyframes fadeInUp {
