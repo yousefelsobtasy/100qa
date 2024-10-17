@@ -17,9 +17,9 @@ body {
     display: grid;
     place-items: center;
     height: 100vh;
-    padding: 20px;
+    padding: 40px;
     margin: 0;
-    background-color: var(--bg-color);
+    background: linear-gradient(135deg, bisque 50%, #ffe5d1 100%);
 }
 
 .notReady {
@@ -39,37 +39,72 @@ body {
 h1 {
     font-family: 'Poppins', sans-serif;
     font-size: clamp(3rem, 5vw, 5rem);
-    /* Responsive font size */
-    font-weight: 700;
+    /* Fluid font size */
     color: var(--primary-color);
-    text-align: center;
-    margin-bottom: 50px;
+    border-bottom: 3px solid var(--primary-color);
     position: absolute;
-    top: 0;
+    top: 20px;
+    /* Added spacing for a cleaner look */
     right: 15px;
     padding-left: 10px;
-    border-bottom: 3px solid var(--primary-color);
-    /* Underline */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    /* Subtle shadow */
-    transition: color 0.3s ease;
-    /* Transition for hover effect */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    /* Enhanced shadow */
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Smoother transition */
+    animation: fadeInUp 0.6s ease-in-out both;
+    /* New animation */
 }
 
 h1:hover {
     color: orange;
-    /* Changes color on hover */
+    transform: translateY(-5px);
+    /* Adds slight hover lift */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.startPause {
+    position: absolute;
+    top: 20px;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: var(--primary-color);
+    color: var(--highlight-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.startPause:hover {
+    background-color: orange;
+    /* transform: scale(1.05); */
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .questionAndAnswer {
-    padding: 20px;
+    padding: 15px;
     box-shadow: -10px -10px var(--box-shadow-color), 10px 10px var(--box-shadow-color);
     margin-top: 100px;
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.4s ease;
 }
 
 .questionAndAnswer:hover {
-    box-shadow: -12px -12px var(--box-shadow-color), 12px 12px var(--box-shadow-color);
+    box-shadow: -15px -15px var(--box-shadow-color), 15px 15px var(--box-shadow-color);
+    transform: translateY(-5px);
 }
 
 .question {
@@ -79,33 +114,38 @@ h1:hover {
     position: relative;
 }
 
-.question::after {
-    content: "؟";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
-
 .answer,
 .ayaAnswer {
     font-size: var(--font-size-medium);
     margin: 30px 10px;
+    line-height: 1.6;
 }
 
 @media (max-width: 768px) {
     body {
-        padding: 10px;
+        padding: 25px;
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
         right: 10px;
+    }
+
+    .startPause {
+        top: 10px;
+        padding: 8px 12px;
+        font-size: 1.2rem;
     }
 
     .questionAndAnswer {
         margin-top: 50px;
-        padding: 10px;
+        padding: 15px;
         box-shadow: -5px -5px var(--box-shadow-color), 5px 5px var(--box-shadow-color);
+    }
+
+    .questionAndAnswer:hover {
+        box-shadow: -10px -10px var(--box-shadow-color), 10px 10px var(--box-shadow-color);
+        transform: scale(1.02);
     }
 
     .question,

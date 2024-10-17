@@ -1,4 +1,3 @@
-import StartPause from './components/StartPause';
 import QuestionAndAnswer from './components/QuestionAndAnswer';
 // import MenuComponent from './components/MenuComponent';
 
