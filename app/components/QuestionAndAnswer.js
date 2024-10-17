@@ -2,8 +2,8 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { qa } from '@/api/questions_and_answers.js';
-import NotReady from '@/app/components/NotReady';
 import StartPause from '@/app/components/StartPause';
+
 
 const QuestionAndAnswer = () => {
     const [qaIndex, setqaIndex] = useState(0); // Initialize state to track current question index
@@ -31,7 +31,7 @@ const QuestionAndAnswer = () => {
 
     return (
         <div className='qa-content'>
-            {qaData ? (
+            {qaData && (
                 <>
                     <StartPause isPaused={isPaused} setIsPaused={setIsPaused} />
                     <h2>100/<span className={`questionId`}>{qaData.id}</span></h2>
@@ -49,8 +49,6 @@ const QuestionAndAnswer = () => {
                         />}
                     </div>
                 </>
-            ) : (
-                <NotReady />
             )}
         </div>
     );
