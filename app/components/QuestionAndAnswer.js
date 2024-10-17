@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { qa } from '@/api/questions_and_answers.js';
-import NotReady from '@/app/components/NotReady';
+import NotReady from './notReady';
 import StartPause from '@/app/components/StartPause';
 
 const QuestionAndAnswer = () => {
