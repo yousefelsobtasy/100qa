@@ -8,27 +8,30 @@
     --highlight-color: #ffffff;
     /* White */
     --bg-color: var(--secondary-color);
-    --font-size-large: 3rem;
-    --font-size-medium: 2rem;
+    --font-size-large: clamp(2.5rem, 5vw, 3.5rem);
+    /* Adjusts with viewport width */
+    --font-size-medium: clamp(1.5rem, 4vw, 2rem);
+    /* Fluid font size */
     --box-shadow-color: rgba(52, 152, 219, 0.5);
     /* Transparent Blue */
 }
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     height: 100vh;
-    margin: 0;
     background: var(--bg-color);
+    font-family: 'Poppins', sans-serif;
 }
 
 .home {
     background-color: var(--primary-color);
-    padding: 50px;
+    padding: clamp(25px, 5vw, 50px);
     height: 100vh;
-    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,16 +41,14 @@ body {
     background-color: var(--secondary-color);
     width: 100%;
     max-width: 600px;
-    height: auto;
-    padding: 20px;
+    padding: clamp(15px, 3vw, 20px);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
 h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-size: clamp(2.5rem, 6vw, 5rem);
     color: var(--text-color);
     margin-bottom: 1rem;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
@@ -69,18 +70,17 @@ h1 {
     color: var(--highlight-color);
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1.5rem;
+    padding: clamp(8px, 2vw, 15px);
+    font-size: clamp(1rem, 3vw, 1.5rem);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
     margin: 0 10px;
-    width: 135px
+    width: clamp(120px, 10vw, 250px);
 }
 
 .cta-button:hover {
     background-color: #ff8555;
-    /* Slightly lighter shade for better contrast */
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
     transform: translateY(-2px);
 }
@@ -89,21 +89,216 @@ a {
     text-decoration: none;
 }
 
+/* Navbar Styling */
+@media (min-width:769px) {
+    nav {
+        background-color: var(--primary-color);
+        padding: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+    }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--highlight-color);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff8555;
+}
+
+nav ul li a svg {
+    font-size: 1.5rem;
+}
+
+.navIcon {
+    display: none;
+}
+
+/* Responsive Styles for Navbar */
+@media (max-width: 768px) {
+    .navIcon {
+        display: block;
+        font-size: 2rem;
+        color: var(--highlight-color);
+        position: absolute;
+        left: 15px;
+        top: 20px;
+        cursor: pointer;
+        z-index: 101;
+        display: grid;
+        place-items: center;
+        border-radius: 10px;
+        background-color: var(--primary-color);
+    }
+
+    .navIcon.active {
+        background-color: var(--highlight-color);
+    }
+
+    .navIcon svg {
+        background-color: var(--primary-color);
+        margin: 5px;
+    }
+
+    .navIcon.active svg {
+        background-color: var(--highlight-color);
+        color: black;
+        margin: 5px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: var(--primary-color);
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 100px 20px;
+        transition: left 0.3s ease;
+    }
+
+    nav ul.show {
+        left: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+}
+
+/* QA Content Styling */
+.qa-content {
+    padding: clamp(20px, 4vw, 40px);
+    padding-top: 60px;
+}
+
+.notReady {
+    background-color: var(--text-color);
+    color: var(--highlight-color);
+    font-size: var(--font-size-large);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    line-height: 100vh;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.6s ease-in-out both;
+}
+
+.startPause {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    color: var(--highlight-color);
+    border: none;
+    border-radius: 5px;
+    padding: clamp(8px, 2vw, 15px);
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.startPause:hover {
+    background-color: #ff8555;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.questionAndAnswer {
+    padding: clamp(10px, 3vw, 20px);
+    box-shadow: -10px -10px var(--box-shadow-color), 10px 10px var(--box-shadow-color);
+    margin-top: clamp(50px, 6vw, 100px);
+    transition: box-shadow 0.3s ease, transform 0.4s ease;
+}
+
+.questionAndAnswer:hover {
+    box-shadow: -15px -15px var(--box-shadow-color), 15px 15px var(--box-shadow-color);
+    transform: translateY(-5px);
+}
+
+.question {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: bold;
+    margin: 10px;
+}
+
+.answer,
+.ayaAnswer {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin: 30px 10px;
+    line-height: 1.6;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Additional Responsive Adjustments */
 @media (max-width: 768px) {
     .home {
         padding: 25px;
     }
 
-    .welcome {
+    .startPause {
+        top: 20px;
+        padding: 8px 12px;
+    }
+
+    .questionAndAnswer {
+        margin-top: 50px;
         padding: 15px;
+        box-shadow: -5px -5px var(--box-shadow-color), 5px 5px var(--box-shadow-color);
     }
 
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    .cta-button {
-        font-size: 1.2rem;
-        padding: 8px 15px;
+    .questionAndAnswer:hover {
+        transform: scale(1.02);
     }
 }

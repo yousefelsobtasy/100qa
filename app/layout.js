@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: `100 سؤال وجوابه في عقيدة التوحيد`,
+  title: "100 qa",
   description: "view questino and answer every day",
 };
 
