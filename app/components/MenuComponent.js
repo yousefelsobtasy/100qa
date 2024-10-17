@@ -1,34 +1,19 @@
-import {
-    Menu,
-    MenuButton,
-    MenuList,
-    MenuItem,
-    MenuItemOption,
-    MenuGroup,
-    MenuOptionGroup,
-    MenuDivider,
-    IconButton,
-} from '@chakra-ui/react'
-
-import {
-    InfoOutlineIcon,
-    HamburgerIcon
-} from '@chakra-ui/icons'
+import { Menu, MenuButton, MenuList, MenuItem, IconButton } from '@chakra-ui/react';
+import { HamburgerIcon } from '@chakra-ui/icons';
 
 export default function MenuComponent() {
     return (
         <Menu>
             <MenuButton
                 as={IconButton}
-                aria-label='Options'
+                aria-label="Options"
                 icon={<HamburgerIcon />}
-                variant='outline'
+                variant="outline"
             />
             <MenuList>
-                <MenuItem icon={<InfoOutlineIcon />}>
-                    New Tab
-                </MenuItem>
+                <MenuItem>New Tab</MenuItem>
+                <MenuItem>New Window</MenuItem>
             </MenuList>
         </Menu>
-    )
+    );
 }
