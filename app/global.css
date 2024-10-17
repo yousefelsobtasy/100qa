@@ -1,12 +1,17 @@
 :root {
-    --primary-color: tomato;
-    --secondary-color: bisque;
-    --text-color: black;
-    --highlight-color: white;
+    --primary-color: #3498db;
+    /* Soft Blue */
+    --secondary-color: #ecf0f1;
+    /* Light Grey */
+    --text-color: #2c3e50;
+    /* Dark Blue */
+    --highlight-color: #ffffff;
+    /* White */
     --bg-color: var(--secondary-color);
     --font-size-large: 3rem;
     --font-size-medium: 2rem;
-    --box-shadow-color: var(--primary-color);
+    --box-shadow-color: rgba(52, 152, 219, 0.5);
+    /* Transparent Blue */
 }
 
 * {
@@ -14,12 +19,10 @@
 }
 
 body {
-    display: grid;
-    place-items: center;
     height: 100vh;
     padding: 40px;
     margin: 0;
-    background: linear-gradient(135deg, bisque 50%, #ffe5d1 100%);
+    background: var(--bg-color);
 }
 
 .notReady {
@@ -42,22 +45,14 @@ h1 {
     /* Fluid font size */
     color: var(--primary-color);
     border-bottom: 3px solid var(--primary-color);
-    position: absolute;
-    top: 20px;
-    /* Added spacing for a cleaner look */
-    right: 15px;
-    padding-left: 10px;
+    display: inline-block;
+    margin: 0;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     /* Enhanced shadow */
     transition: color 0.3s ease, transform 0.3s ease;
     /* Smoother transition */
     animation: fadeInUp 0.6s ease-in-out both;
     /* New animation */
-}
-
-h1:hover {
-    color: orange;
-    transform: translateY(-5px);
 }
 
 @keyframes fadeInUp {
@@ -75,8 +70,8 @@ h1:hover {
 .startPause {
     position: absolute;
     top: 20px;
-    right: 50%;
-    transform: translateX(50%);
+    left: 50%;
+    transform: translateX(-50%);
     background-color: var(--primary-color);
     color: var(--highlight-color);
     border: none;
@@ -89,8 +84,8 @@ h1:hover {
 }
 
 .startPause:hover {
-    background-color: orange;
-    /* transform: scale(1.05); */
+    background-color: #ff8555;
+    /* Slightly lighter shade for better contrast */
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
 }
 
