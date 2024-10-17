@@ -23,29 +23,41 @@ body {
     height: 100vh;
     padding: 20px;
     background-color: var(--bgColor);
+}
 
-    h1 {
-        text-align: center;
-        margin-bottom: 50px;
-        font-size: 3rem;
-    }
+h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 3rem;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    box-shadow: -10px 10px var(--red);
+    padding: 0 0 0 10px;
 }
 
 .questionAndAnswer {
     padding: 20px;
-    box-shadow:
-        -10px -10px var(--red),
-        10px 10px var(--red);
+    box-shadow: -10px -10px var(--red), 10px 10px var(--red);
+    margin-top: 100px;
+}
 
-    .question {
-        font-size: 2rem;
-        font-weight: bold;
-        margin: 10px;
-    }
+.question {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px;
+    position: relative;
+}
 
-    .answer,
-    .ayaAnswer {
-        font-size: 2rem;
-        margin: 30px 10px;
-    }
+.question::after {
+    content: "؟";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.answer,
+.ayaAnswer {
+    font-size: 2rem;
+    margin: 30px 10px;
 }

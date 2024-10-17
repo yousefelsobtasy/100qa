@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { qa } from '@/api/questions_and_answers.js';
 import { useState, useEffect } from 'react';
 import NotReady from './components/notReady';
+import MenuComponent from './components/MenuComponent';
 
 const Page = () => {
   // const qaIndex = 0;
@@ -14,7 +15,7 @@ const Page = () => {
   // Set an interval to change the question index every 3 seconds
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setqaIndex((prevIndex) => (prevIndex + 1) % 4); // Increment the index and loop back to 0 after 100
+      setqaIndex((prevIndex) => (prevIndex + 1) % 6); // Increment the index and loop back to 0 after 100
     }, 3000); // 3000 milliseconds = 3 seconds
 
     // Cleanup interval on component unmount
@@ -28,11 +29,12 @@ const Page = () => {
 
   return (
     <div>
+      <MenuComponent />
       {qaData ? <>
         <h1>100/<span className={`questionId`}>{qaData.id}</span></h1>
         <div className='questionAndAnswer'>
-          <div className='question'>س/ {qaData.question} ؟</div>
-          <div className='answer'>{qaData.textAnswer} .</div>
+          <div className='question'>{qaData.question}</div>
+          <div className='answer'>{qaData.textAnswer}</div>
           {qaData.ayaAnswer && <div className='ayaAnswer'>{qaData.ayaAnswer}</div>}
           {qaData.ayaImgAnswer && <Image
             className='imgAnswer'
