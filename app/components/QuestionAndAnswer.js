@@ -6,7 +6,7 @@ import StartPause from '@/app/components/StartPause';
 
 
 const QuestionAndAnswer = () => {
-    const [qaIndex, setqaIndex] = useState(0); // Initialize state to track current question index
+    const [qaIndex, setqaIndex] = useState(4); // Initialize state to track current question index
     const [qaData, setQaData] = useState(null); // State to store fetched question and answer
     const [isPaused, setIsPaused] = useState(false); // Corrected to camelCase
 

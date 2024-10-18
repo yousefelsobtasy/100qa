@@ -1,3 +1,4 @@
+'use client'
 import Link from "next/link"
 import Image from "next/image"
 
@@ -10,8 +11,14 @@ const AboutTheBookl = () => {
             {
                 pageNumbers.map((pageNum) => (
                     <div>
-                        <Link href={`/p-${pageNum}.png`}>
-                            <Image src={`/p-${pageNum}.png`} alt="book" width={259} height={395} />
+                        <Link href={`/about/${pageNum}`}>
+                            <Image
+                                className="bookImage"
+                                src={`/p-${pageNum}.png`}
+                                alt="book" width={259}
+                                height={395}
+                                layout="responsive"
+                            />
                         </Link>
                     </div>
                 ))
