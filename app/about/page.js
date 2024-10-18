@@ -1,8 +1,11 @@
+import AboutTheBook from "../components/AboutTheBook"
+import Navbar from "../components/Navbar"
 
 const page = () => {
     return (
-        <div>
-            about
+        <div className="about">
+            <Navbar />
+            <AboutTheBook />
         </div>
     )
 }

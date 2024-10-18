@@ -10,19 +10,19 @@ const QuestionAndAnswer = () => {
     const [qaData, setQaData] = useState(null); // State to store fetched question and answer
     const [isPaused, setIsPaused] = useState(false); // Corrected to camelCase
 
-    // Set an interval to change the question index every 5 seconds
-    useEffect(() => {
-        let intervalId;
+    // // Set an interval to change the question index every 5 seconds
+    // useEffect(() => {
+    //     let intervalId;
 
-        if (!isPaused) {
-            intervalId = setInterval(() => {
-                setqaIndex((prevIndex) => (prevIndex + 1) % qa.length); // Adjusted to use qa.length for dynamic indexing
-            }, 1000);
-        }
+    //     if (!isPaused) {
+    //         intervalId = setInterval(() => {
+    //             setqaIndex((prevIndex) => (prevIndex + 1) % qa.length); // Adjusted to use qa.length for dynamic indexing
+    //         }, 1000);
+    //     }
 
-        // Cleanup interval on component unmount
-        return () => { clearInterval(intervalId) };
-    }, [isPaused]);
+    //     // Cleanup interval on component unmount
+    //     return () => { clearInterval(intervalId) };
+    // }, [isPaused]);
 
     // Fetch new question data when qaIndex changes
     useEffect(() => {
@@ -33,7 +33,7 @@ const QuestionAndAnswer = () => {
         <div className='qa-content'>
             {qaData && (
                 <>
-                    <StartPause isPaused={isPaused} setIsPaused={setIsPaused} />
+                    {/* <StartPause isPaused={isPaused} setIsPaused={setIsPaused} /> */}
                     <h2>100/<span className={`questionId`}>{qaData.id}</span></h2>
                     <div className='questionAndAnswer'>
                         <div className='question'>{qaData.question}</div>
