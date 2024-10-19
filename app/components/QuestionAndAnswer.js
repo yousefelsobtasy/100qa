@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { qa } from '@/api/questions_and_answers.js';
 import StartPause from '@/app/components/StartPause';
+import AyaImgBtn from '@/app/components/AyaImgBtn';
 
 
 const QuestionAndAnswer = () => {
@@ -34,20 +35,16 @@ const QuestionAndAnswer = () => {
             {qaData && (
                 <>
                     {/* <StartPause isPaused={isPaused} setIsPaused={setIsPaused} /> */}
-                    <h2>100/<span className={`questionId`}>{qaData.id}</span></h2>
+                    <div className='progress'>
+                        <p className='progressText'>100/<span className={`questionId`}>{qaData.id}</span></p>
+                        <div className='progressBar'><span className='progressBarInner' style={{ width: `${qaData.id}%` }}></span></div>
+                    </div>
                     <div className='questionAndAnswer'>
                         <div className='question'>{qaData.question}</div>
                         <div className='answer'>{qaData.textAnswer}</div>
                         {qaData.ayaAnswer && <div className='ayaAnswer'>{qaData.ayaAnswer}</div>}
-                        {qaData.ayaImgAnswer && <Image
-                            className='imgAnswer'
-                            src={qaData.ayaImgAnswer}
-                            alt={`Image ${qaData.id} Answer`}
-                            width={100}
-                            height={100}
-                            style={{ width: 'auto', height: 'auto' }}
-                        />}
                     </div>
+                    {qaData.ayaImgAnswer && <AyaImgBtn qaData={qaData} />}
                 </>
             )}
         </div>

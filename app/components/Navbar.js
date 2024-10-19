@@ -7,15 +7,10 @@ import { usePathname } from 'next/navigation'; // Import usePathname
 
 const Navbar = () => {
     const pathname = usePathname(); // Get the current pathname
-    const [navOpen, setNavOpen] = useState(false); // State to control nav visibility
-
-    const toggleNav = () => {
-        setNavOpen((prev) => prev = !prev); // Toggle nav open/close
-    };
 
     return (
         <nav>
-            <ul className={navOpen ? 'show' : ''}>
+            <ul >
                 {/* Only show Home link if not on the Home page */}
                 {pathname !== '/' && (
                     <li><Link href='/'><FaHome /> الصفحة الرئيسية</Link></li>

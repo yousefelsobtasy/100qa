@@ -11,15 +11,15 @@ const AboutTheBookl = () => {
             {
                 pageNumbers.map((pageNum) => (
                     <div>
-                        <Link href={`/about/${pageNum}`}>
-                            <Image
-                                className="bookImage"
-                                src={`/p-${pageNum}.png`}
-                                alt="book" width={259}
-                                height={395}
-                                layout="responsive"
-                            />
-                        </Link>
+                        {/* <Link href={`/about/${pageNum}`}> */}
+                        <Image
+                            className="bookImage"
+                            src={`/p-${pageNum}.png`}
+                            alt="book" width={259}
+                            height={395}
+                            layout="responsive"
+                        />
+                        {/* </Link> */}
                     </div>
                 ))
             }
