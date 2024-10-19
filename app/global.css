@@ -393,7 +393,7 @@ nav ul li a:hover {
     background-color: var(--highlight-color);
     color: var(--text-color);
     border: none;
-    border-radius: var(--border-radius);
+    border-radius: 100px;
     padding: 5px 10px;
     font-size: 1.1rem;
     font-weight: bold;
@@ -440,7 +440,24 @@ nav ul li a:hover {
     }
 }
 
+.indexSelector {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 100px;
+    align-items: center;
+    background-color: var(--secondary-color);
+}
 
+.indexSelector button {
+    display: grid;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 5px;
+    border-radius: 100px;
+    border: none;
+}
 
 /* About Start  */
 .about {

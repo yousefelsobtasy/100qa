@@ -50,9 +50,9 @@ const QuestionAndAnswer = () => {
                     </div>
                     {qaData.ayaImgAnswer && <AyaImgBtn qaData={qaData} />}
                     <div className={`indexSelector`}>
-                        <buttpn onClick={() => setqaIndex((prevIndex) => (prevIndex + 1 + qa.length) % qa.length)}><FaChevronRight /></buttpn>
+                        <button onClick={() => setqaIndex((prevIndex) => (prevIndex + 1 + qa.length) % qa.length)}><FaChevronRight /></button>
                         <input type="number" value={qaIndex + 1} onChange={(e) => setqaIndex(e.target.value)} min="1" max={qa.length - 1} />
-                        <buttpn onClick={() => setqaIndex((prevIndex) => (prevIndex - 1 + qa.length) % qa.length)}><FaChevronLeft /></buttpn>
+                        <button onClick={() => setqaIndex((prevIndex) => (prevIndex - 1 + qa.length) % qa.length)}><FaChevronLeft /></button>
                     </div>
                 </>
             )}
