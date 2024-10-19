@@ -17,7 +17,6 @@ const ImgError = () => {
 };
 
 const Page = ({ params }) => {
-
     return (
         <div className="imgOverlay">
             {![1, 2, 3, 4, 5, 6].includes(Number(params.pageNum)) ? (
