@@ -399,7 +399,7 @@ nav ul li a:hover {
 
 .ayaImgBtn:hover {
     background-color: var(--hover-color);
-    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3)
 }
 
 .ayaImg {
