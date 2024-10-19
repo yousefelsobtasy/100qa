@@ -11,7 +11,7 @@ import { FaChevronRight } from "react-icons/fa";
 const QuestionAndAnswer = () => {
     const [qaIndex, setqaIndex] = useState(4); // Initialize state to track current question index
     const [qaData, setQaData] = useState(null); // State to store fetched question and answer
-    const [isPaused, setIsPaused] = useState(false); // Corrected to camelCase
+    const [input, setInput] = useState(qaIndex + 1); // Corrected to camelCase
 
     // // Set an interval to change the question index every 5 seconds
     // useEffect(() => {
@@ -30,6 +30,7 @@ const QuestionAndAnswer = () => {
     // Fetch new question data when qaIndex changes
     useEffect(() => {
         setQaData(qa[qaIndex]); // Fetch function
+        setInput(() => qaIndex + 1);
     }, [qaIndex]);
 
     return (
@@ -48,11 +49,20 @@ const QuestionAndAnswer = () => {
                         <div className='answer'>{qaData.textAnswer}</div>
                         {qaData.ayaAnswer && <div className='ayaAnswer'>{qaData.ayaAnswer}</div>}
                     </div>
-                    {qaData.ayaImgAnswer && <AyaImgBtn qaData={qaData} />}
+                    <AyaImgBtn qaData={qaData} isAyaImg={qaData.ayaImgAnswer} />
                     <div className={`indexSelector`}>
-                        <button onClick={() => setqaIndex((prevIndex) => (prevIndex + 1 + qa.length) % qa.length)}><FaChevronRight /></button>
-                        <input type="number" value={qaIndex + 1} onChange={(e) => setqaIndex(e.target.value)} min="1" max={qa.length - 1} />
-                        <button onClick={() => setqaIndex((prevIndex) => (prevIndex - 1 + qa.length) % qa.length)}><FaChevronLeft /></button>
+                        <button onClick={() => { setqaIndex((prevIndex) => (prevIndex - 1 + qa.length) % qa.length) }}><FaChevronRight /></button>
+                        <input
+                            type="number"
+                            value={input}
+                            onChange={(e) => setInput(e.target.value)}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter' && input > 0 && input <= qa.length) { setqaIndex(input - 1) }
+                            }}
+                            min="1"
+                            max={qa.length - 1}
+                        />
+                        <button onClick={() => { setqaIndex((prevIndex) => (prevIndex + 1 + qa.length) % qa.length) }}><FaChevronLeft /></button>
                     </div>
                 </>
             )}

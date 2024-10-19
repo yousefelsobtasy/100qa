@@ -26,9 +26,9 @@ const AyaImgBtn = ({ qaData }) => {
     const [showAyaImg, setShowAyaImg] = useState(false)
 
     return (
-        <>
+        < >
             <AyaImg qaData={qaData} showAyaImg={showAyaImg} setShowAyaImg={setShowAyaImg} />
-            <button className='ayaImgBtn' onClick={() => setShowAyaImg(true)}>
+            <button className='ayaImgBtn' onClick={() => setShowAyaImg(true)} style={{ visibility: qaData.ayaImgAnswer ? "visible" : "hidden" }}>
                 {/* {showAyaImg ? 'اغلاق الصورة' : 'عرض تفسير الأية'} */}
                 عرض تفسير الأية
             </button>
