@@ -6,9 +6,9 @@ const ImgError = () => {
     return (
         <>
             <p>الصفحة غير متاحة</p>
-            <Link href="/about">
+            <Link href="/about" >
                 <button>
-                    <p>الرجوع لصفحة  ( المزيد عن الموقع )</p>
+                    الرجوع لصفحة ( المزيد عن الموقع )
                     <FaArrowLeft />
                 </button>
             </Link>
@@ -23,9 +23,11 @@ const Page = ({ params }) => {
                 <ImgError />
             ) : (
                 <>
-                    <button className='goBackBtn'>
-                        <FaArrowLeft />
-                    </button>
+                    <Link href="/about" >
+                        <button className='goBackBtn'>
+                            <FaArrowLeft />
+                        </button>
+                    </Link>
                     <Image
                         className="bookImage"
                         src={`/p-${params.pageNum}.png`}
