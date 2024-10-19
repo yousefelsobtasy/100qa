@@ -17,6 +17,7 @@
     --hover-color: #2980b9;
     /* Darker Blue */
     --border-radius: 15px;
+    ---fadeInUp-animation: fadeInUp 0.6s ease-in-out both;
 }
 
 * {
@@ -77,6 +78,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: var(---fadeInUp-animation);
 }
 
 .welcome {
@@ -176,9 +178,9 @@ nav ul li a {
     transition: all 0.3s ease;
 }
 
-@media (min-width: 1401px) {
+@media (min-width: 768px) {
     nav ul li a {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -190,10 +192,6 @@ nav ul li a:hover {
 .navIcon {
     display: none;
 }
-
-@media (max-width: 768px) {}
-
-@media (max-width: 480px) {}
 
 /* Responsive Styles for Navbar */
 /* @media (max-width: 768px) {
@@ -270,20 +268,18 @@ nav ul li a:hover {
 }
 
 .qa-content {
-    background-color: var(--secondary-color);
     width: 100%;
-    padding: 20px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     margin-top: 30px;
-}
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+    animation: var(---fadeInUp-animation);
 
-@media (min-width: 1401px) {
-    .qa-content {
-        margin-top: 50px;
+    @media (min-width: 768px) {
+        margin-top: 40px;
     }
-
 }
+
 
 .progress {
     display: flex;
@@ -359,14 +355,14 @@ nav ul li a:hover {
 }
 
 .questionAndAnswer {
-    padding: 10px;
-    box-shadow: -10px -10px var(--box-shadow-color), 10px 10px var(--box-shadow-color);
-    margin-top: 30px;
-    transition: box-shadow 0.3s ease, transform 0.4s ease;
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: var(--border-radius);
     max-height: 66vh;
+    transition: box-shadow 0.3s ease, transform 0.4s ease;
     overflow-y: scroll;
 }
-
 
 .question {
     font-size: clamp(1.5rem, 3vw, 5rem);
@@ -384,8 +380,9 @@ nav ul li a:hover {
 }
 
 .ayaImgBtn {
-    background-color: var(--primary-color);
-    color: var(--highlight-color);
+    font-family: 'Tajawal', sans-serif;
+    background-color: var(--highlight-color);
+    color: var(--text-color);
     border: none;
     border-radius: var(--border-radius);
     padding: 5px 10px;
@@ -394,11 +391,9 @@ nav ul li a:hover {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-    margin-top: 30px;
 }
 
 .ayaImgBtn:hover {
-    background-color: var(--hover-color);
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3)
 }
 

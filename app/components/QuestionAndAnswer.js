@@ -35,6 +35,8 @@ const QuestionAndAnswer = () => {
             {qaData && (
                 <>
                     {/* <StartPause isPaused={isPaused} setIsPaused={setIsPaused} /> */}
+
+
                     <div className='progress'>
                         <p className='progressText'>100/<span className={`questionId`}>{qaData.id}</span></p>
                         <div className='progressBar'><span className='progressBarInner' style={{ width: `${qaData.id}%` }}></span></div>
