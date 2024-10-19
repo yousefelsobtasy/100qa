@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { qa } from '@/api/questions_and_answers.js';
 import StartPause from '@/app/components/StartPause';
 import AyaImgBtn from '@/app/components/AyaImgBtn';
+import { FaChevronLeft } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
 
 
 const QuestionAndAnswer = () => {
@@ -47,6 +49,11 @@ const QuestionAndAnswer = () => {
                         {qaData.ayaAnswer && <div className='ayaAnswer'>{qaData.ayaAnswer}</div>}
                     </div>
                     {qaData.ayaImgAnswer && <AyaImgBtn qaData={qaData} />}
+                    <div className={`indexSelector`}>
+                        <buttpn onClick={() => setqaIndex((prevIndex) => (prevIndex + 1 + qa.length) % qa.length)}><FaChevronRight /></buttpn>
+                        <input type="number" value={qaIndex + 1} onChange={(e) => setqaIndex(e.target.value)} min="1" max={qa.length - 1} />
+                        <buttpn onClick={() => setqaIndex((prevIndex) => (prevIndex - 1 + qa.length) % qa.length)}><FaChevronLeft /></buttpn>
+                    </div>
                 </>
             )}
         </div>
