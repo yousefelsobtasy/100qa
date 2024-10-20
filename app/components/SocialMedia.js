@@ -1,11 +1,13 @@
+import { FaFacebookMessenger } from 'react-icons/fa'
+import { FaWhatsappSquare } from "react-icons/fa";
+import { SiGmail } from 'react-icons/si'
 
 const SocialMedia = () => {
     return (
         <div>
-            <div>F</div>
-            <div>X</div>
-            <div>Y</div>
-            <div>E</div>
+            <div><FaFacebookMessenger /></div>
+            <div><FaWhatsappSquare /></div>
+            <div><SiGmail /></div>
         </div>
     )
 }

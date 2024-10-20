@@ -30,7 +30,7 @@ const Page = ({ params }) => {
                     </Link>
                     <Image
                         className="bookImage"
-                        src={`/p-${params.pageNum}.png`}
+                        src={`/p-${params.pageNum}.jpg`}
                         alt="book"
                         width={259}
                         height={395}
