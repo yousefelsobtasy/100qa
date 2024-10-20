@@ -53,11 +53,16 @@ const QuestionAndAnswer = () => {
                     <div className={`indexSelector`}>
                         <button onClick={() => { setqaIndex((prevIndex) => (prevIndex - 1 + qa.length) % qa.length) }}><FaChevronRight /></button>
                         <input
-                            type="number"
+                            dir="ltr"
+                            type="text"
                             value={input}
                             onChange={(e) => setInput(e.target.value)}
                             onKeyDown={(e) => {
-                                if (e.key === 'Enter' && input > 0 && input <= qa.length) { setqaIndex(input - 1) }
+                                if (e.key === 'Enter' && input > 0 && input <= qa.length) {
+                                    setqaIndex(input - 1)
+                                } else if (e.key === 'Enter' && (input < 0 || input > qa.length || typeof input !== typeof Number)) {
+                                    alert(`Number between 1 and ${qa.length}`)
+                                }
                             }}
                             min="1"
                             max={qa.length - 1}
