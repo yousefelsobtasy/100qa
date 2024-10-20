@@ -1,13 +1,13 @@
 import Navbar from "../components/Navbar"
 import AboutTheBook from "../components/AboutTheBook"
-import SocialMedia from "../components/SocialMedia"
+import Contact from "../components/Contact"
 
 const page = () => {
     return (
         <div className="about">
             <Navbar />
             <AboutTheBook />
-            <SocialMedia />
+            <Contact />
         </div>
     )
 }
