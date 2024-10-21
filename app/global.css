@@ -398,7 +398,7 @@ nav ul li a:hover {
     max-height: 61vh;
     transition: box-shadow 0.3s ease, transform 0.4s ease;
     overflow-y: scroll;
-    mask-image: linear-gradient(to top, transparent 0%, black 25%, black 100%);
+    mask-image: linear-gradient(to top, transparent 0%, black 20%, black 100%);
 }
 
 .question {
@@ -464,17 +464,17 @@ nav ul li a:hover {
 .indexSelector {
     display: flex;
     justify-content: space-between;
-    padding: 5px;
+    padding: 10px;
     border-radius: 100px;
     align-items: center;
-    background-color: var(--primary-color);
+    background-color: var(--highlight-color);
 }
 
 .indexSelector button {
     display: grid;
-    background: var(--secondary-color);
-    color: var(--primary-color);
-    padding: 5px 20px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 20px;
     text-align: center;
     border-radius: 100px;
     border: none;
@@ -482,12 +482,13 @@ nav ul li a:hover {
 
 .indexSelector input {
     text-align: center;
-    padding: 2px 6px;
+    padding: 5px 6px;
     border: none;
     border-radius: var(--border-radius);
 
     @media (max-width:768px) {
         max-width: 120px;
+        font-size: 1.2rem;
     }
 }
 
@@ -513,6 +514,9 @@ nav ul li a:hover {
     width: 100%;
     font-size: 1.2rem;
     border-radius: 100px;
+    font-family: 'Tajawal', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .bookIntroBtn:hover {
@@ -554,7 +558,7 @@ nav ul li a:hover {
     left: clamp(25px, 5vw, 50px);
 }
 
-.imgOverlay {
+/* .imgOverlay {
     width: 100%;
     margin-top: 50px;
 
@@ -598,7 +602,7 @@ nav ul li a:hover {
 
         }
     }
-}
+} */
 
 .contact {
     display: flex;
@@ -609,7 +613,7 @@ nav ul li a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: var(--border-radius);
     background-color: var(--secondary-color);
-    font-size: .9rem;
+    font-size: 1rem;
 
     .contactText {
         display: flex;
@@ -623,8 +627,43 @@ nav ul li a:hover {
 
     .socialLinks {
         svg {
-            margin: 0 5px;
+            margin: 0 10px;
+            font-size: 1.3rem;
         }
+    }
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-color);
+
+    & p:first-child {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--text-color);
+
+        span {
+            color: var(--primary-color);
+        }
+    }
+
+    hr {
+        width: 50%;
+        height: 3px;
+        border-radius: 100px;
+        background-color: var(--primary-color);
+    }
+
+    & p:last-child {
+        color: var(--text-color);
     }
 }
 

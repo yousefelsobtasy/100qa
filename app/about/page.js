@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar"
 import AboutTheBook from "../components/AboutTheBook"
 import Contact from "../components/Contact"
+import Footer from "../components/Footer"
 
 const page = () => {
     return (
@@ -8,6 +9,7 @@ const page = () => {
             <Navbar />
             <AboutTheBook />
             <Contact />
+            <Footer />
         </div>
     )
 }
