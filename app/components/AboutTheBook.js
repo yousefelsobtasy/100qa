@@ -19,7 +19,8 @@ const AboutTheBookl = () => {
                             <Image
                                 className="bookImage"
                                 src={`/p-${pageNum}.jpg`}
-                                alt="book" width={259}
+                                alt="book"
+                                width={259}
                                 height={395}
                                 layout="responsive"
                             />
