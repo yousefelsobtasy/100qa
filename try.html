@@ -4,34 +4,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Frame</title>
+    <title>CSS Only Photo Slider</title>
     <style>
-        :root {
-            --red: tomato;
-            --bgColor: bisque;
-        }
-
+        /* Basic styling */
         body {
-            display: grid;
-            place-items: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 100vh;
-            background-color: var(--bgColor);
+            margin: 0;
         }
 
-        .text.framed {
-            padding: 20px;
-            box-shadow:
-                -50px -50px 0 -40px var(--red),
-                50px 50px 0 -40px var(--red);
+        .slider {
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            width: 500%;
+            transition: all 0.5s ease;
+        }
+
+        .slides img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Hide radio buttons */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Navigation dots */
+        .nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .nav label {
+            cursor: pointer;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #ddd;
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        input[type="radio"]:checked+label {
+            background-color: #0077B6;
+            /* Active color */
+        }
+
+        /* Control the slider movement */
+        #slide1:checked~.slides {
+            transform: translateX(0);
+        }
+
+        #slide2:checked~.slides {
+            transform: translateX(-100%);
+        }
+
+        #slide3:checked~.slides {
+            transform: translateX(-200%);
+        }
+
+        #slide4:checked~.slides {
+            transform: translateX(-300%);
+        }
+
+        #slide5:checked~.slides {
+            transform: translateX(-400%);
         }
     </style>
 </head>
 
-<body dir="rtl">
-    <div class="text framed">
-        <h3>ما هو الإسلام؟</h3>
-        <h2>الإسلام هو الاستسلام لله بالتوحيد والانقياد له بالطاعة</h2>
+<body style="background-color: #000;">
+
+    <div class="slider">
+        <!-- Radio buttons -->
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        <input type="radio" name="slider" id="slide5">
+
+        <!-- Slide images -->
+        <div class="slides">
+            <img src="https://via.placeholder.com/600x400/0077B6/FFFFFF?text=Slide+1" alt="Slide 1">
+            <img src="https://via.placeholder.com/600x400/0096C7/FFFFFF?text=Slide+2" alt="Slide 2">
+            <img src="https://via.placeholder.com/600x400/00B4D8/FFFFFF?text=Slide+3" alt="Slide 3">
+            <img src="https://via.placeholder.com/600x400/48CAE4/FFFFFF?text=Slide+4" alt="Slide 4">
+            <img src="https://via.placeholder.com/600x400/90E0EF/FFFFFF?text=Slide+5" alt="Slide 5">
+        </div>
+
+        <!-- Navigation dots -->
+        <div class="nav">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+            <label for="slide5"></label>
+        </div>
     </div>
+
 </body>
 
 </html>

@@ -34,7 +34,7 @@ const QuestionAndAnswer = () => {
     }, [qaIndex]);
 
     return (
-        <div className='qa-content'>
+        <div className='qaContent'>
             {qaData && (
                 <>
                     {/* <StartPause isPaused={isPaused} setIsPaused={setIsPaused} /> */}
