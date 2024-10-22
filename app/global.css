@@ -1,6 +1,56 @@
 /* styles/globals.css */
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 
+/* Import all the Jali Arabic fonts */
+
+/* Extra Light (200) */
+@font-face {
+    font-family: 'Jali';
+    src: url('/fonts/ArbFONTS-Jali-Arabic-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* Light (300) */
+@font-face {
+    font-family: 'Jali';
+    src: url('/fonts/ArbFONTS-Jali-Arabic-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Regular (400) */
+@font-face {
+    font-family: 'Jali';
+    src: url('/fonts/ArbFONTS-Jali-Arabic-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Medium (500) */
+@font-face {
+    font-family: 'Jali';
+    src: url('/fonts/ArbFONTS-Jali-Arabic-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Bold (700) */
+@font-face {
+    font-family: 'Jali';
+    src: url('/fonts/ArbFONTS-Jali-Arabic-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Extra Bold (800) */
+@font-face {
+    font-family: 'Jali';
+    src: url('/fonts/ArbFONTS-Jali-Arabic-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
 :root {
     --primary-color: #3498db;
     /* Soft Blue */
@@ -90,7 +140,7 @@ body {
     background: linear-gradient(to bottom, rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 0.8)),
         linear-gradient(to right, #3498db, #e0f7fa);
     padding: 15px;
-    font-family: "Tajawal", sans-serif;
+    font-family: "Jali", "Tajawal", sans-serif;
 }
 
 .home {

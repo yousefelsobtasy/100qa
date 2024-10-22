@@ -41,8 +41,8 @@ const QuestionAndAnswer = () => {
 
 
                     <div className='progress'>
-                        <p className='progressText'>100/<span className={`questionId`}>{qaData.id}</span></p>
-                        <div className='progressBar'><span className='progressBarInner' style={{ width: `${qaData.id}%` }}></span></div>
+                        <p className='progressText'>{qa.length}/<span className={`questionId`}>{qaData.id}</span></p>
+                        <div className='progressBar'><span className='progressBarInner' style={{ width: `${qaData.id / qa.length * 100}%` }}></span></div>
                     </div>
                     <div className='questionAndAnswer'>
                         <div className='question'>{qaData.question}</div>
