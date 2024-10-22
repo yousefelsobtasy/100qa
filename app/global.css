@@ -568,41 +568,42 @@ nav ul li a:hover {
     border-radius: var(--border-radius);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
-    .bookIntroHeading {
-        color: var(--primary-color);
-        font-weight: bold;
-        font-size: 1.3rem;
-        padding: 10px;
-        margin-block: 5px;
-    }
+}
 
-    .img {
-        border-radius: var(--border-radius);
-    }
+.bookIntro .bookIntroHeading {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 10px;
+    margin-block: 5px;
+}
 
-    .restImgs {
-        overflow: hidden;
-    }
+.bookIntro .img {
+    border-radius: var(--border-radius);
+}
 
-    .restImgs.hidden {
-        height: 0;
-    }
+.bookIntro .restImgs {
+    overflow: hidden;
+}
 
-    .showMoreBtn {
-        font-family: 'Tajawal', sans-serif;
-        font-weight: 500;
-        cursor: pointer;
-        border: none;
-        background-color: var(--primary-color);
-        color: var(--secondary-color);
-        padding: 7px 17px;
-        border-radius: var(--border-radius);
-        margin-top: 5px;
-    }
+.bookIntro .restImgs.hidden {
+    height: 0;
+}
 
-    .showMoreBtn:hover {
-        background-color: var(--hover-color);
-    }
+.bookIntro .showMoreBtn {
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 7px 17px;
+    border-radius: var(--border-radius);
+    margin-top: 5px;
+}
+
+.bookIntro .showMoreBtn:hover {
+    background-color: var(--hover-color);
 }
 
 
