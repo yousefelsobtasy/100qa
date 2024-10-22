@@ -111,7 +111,10 @@
     text-transform: uppercase;
     display: none;
 
-    @media (min-width:768px) {
+}
+
+@media (min-width:768px) {
+    .betaMessage {
         display: flex;
     }
 }
@@ -177,7 +180,8 @@ h1 {
 
 .button-container {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .cta-button {
@@ -190,7 +194,7 @@ h1 {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-    width: clamp(135px, 35vw, 400px);
+    width: 100%;
 }
 
 .cta-button:hover {
@@ -199,11 +203,6 @@ h1 {
     transform: translateY(-2px);
 }
 
-a {
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-}
 
 /* Navbar Styling */
 nav {
@@ -607,7 +606,6 @@ nav ul li a:hover {
 }
 
 
-
 .contact {
     width: 100%;
     display: flex;
@@ -617,22 +615,21 @@ nav ul li a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: var(--border-radius);
     font-size: 1rem;
+    line-height: 100%;
+}
 
-    .contactText {
-        display: flex;
-        gap: 10px;
+.contact .contactText {
+    display: flex;
+    gap: 5px;
+}
 
-        &>svg {
-            transform: rotate(180deg);
-        }
-    }
+.contact .contactText>svg {
+    transform: rotate(180deg);
+}
 
-    .socialLinks {
-        svg {
-            margin: 0 10px;
-            font-size: 1.3rem;
-        }
-    }
+.contact .socialLinks svg {
+    margin: 0 10px;
+    font-size: 1.3rem;
 }
 
 
