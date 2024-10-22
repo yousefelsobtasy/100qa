@@ -1,30 +1,42 @@
+'use client'
 import Image from "next/image"
+import { useState } from "react"
 
 const AboutTheBookl = () => {
-    const pageNumbers = [1, 2, 3, 4, 5, 6]
+    const pageNumbers = [2, 3, 4, 5, 6]
+    const [showMore, setShowMore] = useState(false)
 
     return (
         <>
-            <h2 className={`bookIntroHeading`} >مقدمة الكتاب </h2>
             <div className={`bookIntro `}>
-                <div className={`bookIntroContainer`}>
+                <h2 className={`bookIntroHeading`} >مقدمة الكتاب </h2>
+                <div className="firstImg">
+                    <Image
+                        className={`image-1 img`}
+                        src={`/p-1.jpg`}
+                        alt="book"
+                        width={259}
+                        height={395}
+                        layout="responsive"
+                    />
+                </div>
+                <div className={`restImgs ${!showMore ? "hidden" : ""}`}>
                     {
                         pageNumbers.map((pageNum) => (
-                            <div>
-                                {/* <Link href={`/about/${pageNum}`}> */}
+                            <div key={pageNum} className={`image-${pageNum}-container`}>
                                 <Image
-                                    className="bookImage"
+                                    className={`image-${pageNum} img`}
                                     src={`/p-${pageNum}.jpg`}
                                     alt="book"
                                     width={259}
                                     height={395}
                                     layout="responsive"
                                 />
-                                {/* </Link> */}
                             </div>
                         ))
                     }
                 </div>
+                <button className="showMoreBtn" onClick={() => setShowMore(prev => !prev)} >رؤية {showMore ? 'أقل' : 'أكثر'}</button>
             </div>
         </>
     )

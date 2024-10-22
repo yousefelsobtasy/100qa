@@ -91,7 +91,6 @@ body {
         linear-gradient(to right, #3498db, #e0f7fa);
     padding: 15px;
     font-family: "Tajawal", sans-serif;
-    height: 100vh;
 }
 
 .home {
@@ -512,40 +511,51 @@ nav ul li a:hover {
     }
 }
 
-.bookIntroHeading {
-    color: var(--primary-color);
-    font-weight: bold;
-    font-size: 1.3rem;
-    padding: 10px;
-}
-
 
 .bookIntro {
-    overflow-x: scroll;
+    padding: 10px;
+    padding-top: 0;
     border-radius: var(--border-radius);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
+    .bookIntroHeading {
+        color: var(--primary-color);
+        font-weight: bold;
+        font-size: 1.3rem;
+        padding: 10px;
+        margin-block: 5px;
+    }
 
-    .bookIntroContainer {
+    .img {
+        border-radius: var(--border-radius);
+    }
 
-        display: flex;
-        align-items: center;
-        width: 600%;
+    .restImgs {
+        transition: height 0.3s ease-in-out;
+        overflow: hidden;
+    }
 
-        div {
-            width: 100%;
-            padding: 0 20px;
-        }
+    .restImgs.hidden {
+        height: 0;
+    }
+
+    .showMoreBtn {
+        font-family: 'Tajawal', sans-serif;
+        font-weight: 500;
+        cursor: pointer;
+        border: none;
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        padding: 7px 17px;
+        border-radius: var(--border-radius);
+        margin-top: 5px;
+    }
+
+    .showMoreBtn:hover {
+        background-color: var(--hover-color);
     }
 }
 
-.bookImage {
-    border-radius: var(--border-radius);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
 
 
 .contact {
