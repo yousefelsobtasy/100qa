@@ -531,7 +531,6 @@ nav ul li a:hover {
     }
 
     .restImgs {
-        transition: height 0.3s ease-in-out;
         overflow: hidden;
     }
 
