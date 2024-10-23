@@ -441,7 +441,7 @@ nav ul li a:hover {
     margin-block: 20px;
 }
 
-.ayaImgBtn {
+.contentImgBtn {
     font-family: 'Tajawal', sans-serif;
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -455,37 +455,38 @@ nav ul li a:hover {
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-.ayaImgBtn:hover {
+.contentImgBtn:hover {
     background-color: var(--hover-color);
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3)
 }
 
-.ayaImg {
+.contentImgContainer {
     position: relative;
     max-width: 90%;
     max-height: 90%;
-
-    .imgQuestion {
-        width: 100%;
-        height: 100%;
-        border-radius: var(--border-radius);
-    }
-
-    .closeBtn {
-        cursor: pointer;
-        position: absolute;
-        top: -32px;
-        width: 30px;
-        height: 30px;
-        border-radius: 30px;
-        display: grid;
-        place-items: center;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        background-color: #a50101;
-        color: var(--highlight-color);
-        border: none;
-    }
 }
+
+.contentImgContainer .contactImg {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+}
+
+.contentImgContainer .closeBtn {
+    cursor: pointer;
+    position: absolute;
+    top: -32px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #a50101;
+    color: var(--highlight-color);
+    border: none;
+}
+
 
 /* Error Message Styling */
 .error-message {

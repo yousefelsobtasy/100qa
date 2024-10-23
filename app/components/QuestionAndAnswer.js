@@ -7,7 +7,7 @@ import { FaChevronRight } from "react-icons/fa";
 import Loading from './Louding';
 
 // Lazy-loaded components with Suspense
-const AyaImgBtn = dynamic(() => import('@/app/components/AyaImgBtn'), { suspense: true });
+const ContentImgBtn = dynamic(() => import('@/app/components/ContentImgBtn'), { suspense: true });
 
 const QuestionAndAnswer = () => {
     const [qaIndex, setqaIndex] = useState(() => (qa.length > 0 ? 0 : 4));
@@ -43,7 +43,8 @@ const QuestionAndAnswer = () => {
                         {qaData.ayaAnswer && <div className='ayaAnswer'>{qaData.ayaAnswer}</div>}
                     </div>
 
-                    <AyaImgBtn qaData={qaData} />
+                    <ContentImgBtn qaData={qaData} content={`aya`} />
+                    <ContentImgBtn qaData={qaData} content={`qa`} />
 
                     <div className={`indexSelector`}>
                         <button aria-label="Previous Question" onClick={() => { setqaIndex((prevIndex) => (prevIndex - 1 + qa.length) % qa.length) }}>
