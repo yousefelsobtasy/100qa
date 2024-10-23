@@ -1,7 +1,7 @@
 import QuestionAndAnswer from '@/app/components/QuestionAndAnswer';
 import Navbar from '@/app/components/Navbar';
 
-export const metadata = { title: 'السؤال والجواب' }
+export const metadata = { title: '100qa - السؤال والجواب' }
 
 const Page = () => {
 

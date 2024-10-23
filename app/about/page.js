@@ -3,14 +3,18 @@ import AboutTheBook from "../components/AboutTheBook"
 import Contact from "../components/Contact"
 import Footer from "../components/Footer"
 
+
+export const metadata = { title: '100qa - عن الموقع' }
+
 const page = () => {
-    return (
+    return (<>
+        <Navbar />
         <div className="about">
-            <Navbar />
             <AboutTheBook />
             <Contact />
             <Footer />
         </div>
+    </>
     )
 }
 

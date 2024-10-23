@@ -14,7 +14,7 @@ import Logo from '@/app/components/Logo'
 // });
 
 export const metadata = {
-  title: "100 qa",
+  title: "100qa",
   description: "view questino and answer every day",
 };
 
