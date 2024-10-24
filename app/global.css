@@ -45,6 +45,23 @@
 
 /* Animations End */
 
+.news {
+    z-index: 1;
+    display: none;
+    place-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    line-height: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 .betaMessage {
     position: absolute;
     top: 50%;
@@ -62,7 +79,6 @@
     text-align: center;
     text-transform: uppercase;
     display: none;
-
 }
 
 @media (min-width:768px) {
@@ -639,6 +655,7 @@ nav ul li a:hover {
 }
 
 .contact .socialLinks svg {
+    color: black;
     margin: 0 10px;
     font-size: 1.3rem;
 }

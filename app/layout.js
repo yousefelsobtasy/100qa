@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import '@/app/global.css'
 import Logo from '@/app/components/Logo'
+import News from '@/app/components/News'
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body dir="rtl" >
+        <News />
         <div className="betaMessage">الموقع جاهز للهاتف فقط حالياً</div>
         {/* <Logo /> */}
         {children}
