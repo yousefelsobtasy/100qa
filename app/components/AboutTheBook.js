@@ -3,8 +3,16 @@ import Image from "next/image"
 import { useState } from "react"
 
 const AboutTheBookl = () => {
-    const pageNumbers = [2, 3, 4, 5, 6]
     const [showMore, setShowMore] = useState(false)
+    const pageNumbers = [
+        { pageNum: 2, url: "/p-2.jpg" },
+        { pageNum: 3, url: "/p-3.jpg" },
+        { pageNum: 4, url: "/p-4.jpg" },
+        { pageNum: 5, url: "/p-5.jpg" },
+        { pageNum: 6, url: "/p-6.jpg" },
+    ]
+    const url = "/p-1.jpg"
+
 
     return (
         <>
@@ -13,20 +21,22 @@ const AboutTheBookl = () => {
                 <div className="firstImg">
                     <Image
                         className={`image-1 img`}
-                        src={`/p-1.jpg`}
+                        src={`/p-1.png`}
                         alt="book"
                         width={259}
                         height={395}
                         layout="responsive"
+
                     />
                 </div>
                 <div className={`restImgs ${!showMore ? "hidden" : ""}`}>
                     {
-                        pageNumbers.map((pageNum) => (
+                        pageNumbers.map(({ pageNum, url }) => (
+
                             <div key={pageNum} className={`image-${pageNum}-container`}>
                                 <Image
                                     className={`image-${pageNum} img`}
-                                    src={`/p-${pageNum}.jpg`}
+                                    src={`/p-${pageNum}.png`}
                                     alt="book"
                                     width={259}
                                     height={395}
