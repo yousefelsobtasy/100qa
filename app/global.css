@@ -44,23 +44,61 @@
 }
 
 /* Animations End */
-
-.news {
-    z-index: 1;
+.newsOverlay {
     display: none;
     place-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000006e;
+    z-index: 1;
+}
+
+.newsOverlay.show {
+    display: grid;
+}
+
+.newsOverlay .news {
+    display: grid;
+    place-items: center;
+    gap: 30px;
     width: 300px;
-    height: 200px;
-    background-color: var(--primary-color);
+    padding: 30px 10px;
+    background-color: var(--secondary-color);
     color: var(--text-color);
     line-height: 100%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
+    border-radius: var(--border-radius);
 }
+
+.newsOverlay .news .newsText {
+    text-align: center;
+    line-height: 1.6;
+}
+
+.newsOverlay .news .newsText a {
+    color: var(--primary-color);
+    text-decoration: none;
+
+}
+
+.newsOverlay .news button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    font-family: "Tajawal", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
 
 .betaMessage {
     position: absolute;
@@ -93,18 +131,15 @@
     top: 50%;
     left: 50%;
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     transform: translate(-50%, -50%);
-    backdrop-filter: blur(5px);
+    background-color: #0000006e;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.3s ease;
 }
 
 .overlay.show {
     display: flex;
-    /* Display overlay when active */
-    opacity: 1;
 }
 
 /* components/Loading.module.css */
@@ -158,6 +193,7 @@ body {
         linear-gradient(to right, #3498db, #e0f7fa);
     padding: 15px;
     font-family: "Tajawal", sans-serif;
+    overflow: hidden;
 }
 
 .welcome {
@@ -491,7 +527,8 @@ nav ul li a:hover {
 .contentImgContainer .closeBtn {
     cursor: pointer;
     position: absolute;
-    top: -32px;
+    top: -15px;
+    right: -15px;
     width: 30px;
     height: 30px;
     border-radius: 30px;

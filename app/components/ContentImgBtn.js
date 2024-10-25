@@ -13,7 +13,7 @@ const ContentImg = ({ qaData, showContent, setShowContent, content }) => {
     return (
         <div
             className={`overlay ${showContent ? 'show' : ''}`}
-            onClick={() => setShowAyaImg(false)}
+            onClick={() => setShowContent(false)}
             onKeyDown={handleKeyDown}
             role="dialog"
             aria-labelledby={`${content === "aya" ? 'aya-img-' : 'qa-img-'}${qaData.id}`}
@@ -21,12 +21,11 @@ const ContentImg = ({ qaData, showContent, setShowContent, content }) => {
         >
             <div
                 className={`contentImgContainer`}
-                style={{ display: showContent ? 'block' : 'none' }}
                 onClick={(e) => e.stopPropagation()}
             >
                 <button
                     className="closeBtn"
-                    onClick={() => setShowAyaImg(false)}
+                    onClick={() => setShowContent(false)}
                     aria-label={`Close ${content === "aya" ? 'aya img' : 'qa img'} modal`}
                 >
                     <IoClose fontSize={20} />
@@ -51,7 +50,7 @@ const ContentImgBtn = ({ qaData, content }) => {
     return (
         <>
             {/* Modal for showing Aya Image */}
-            {showContent && <ContentImg qaData={qaData} ShowContent={showContent} setShowContent={setShowContent} content={content} />}
+            {showContent && <ContentImg qaData={qaData} showContent={showContent} setShowContent={setShowContent} content={content} />}
 
             {/* Button to show Aya Image */}
             <button
