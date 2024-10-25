@@ -15,11 +15,11 @@ const SocialLinks = () => {
                     <FaWhatsappSquare />
                 </Link>
             </span>
-            {/* <span>
+            <span>
                 <a href="mailto:yousefelsobtasy15@gmail.com" rel="noopener noreferrer">
                     <SiGmail />
                 </a>
-            </span> */}
+            </span>
         </div>
     );
 };

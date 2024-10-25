@@ -246,6 +246,7 @@ body:has(.loadingContainer) {
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
+    font-family: "Tajawal", sans-serif;
 }
 
 .cta-button:hover {
