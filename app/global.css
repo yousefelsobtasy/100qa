@@ -195,6 +195,12 @@ body {
     font-family: "Tajawal", sans-serif;
 }
 
+@media (min-width:768px) {
+    body {
+        overflow: hidden;
+    }
+}
+
 .welcome {
     background-color: var(--secondary-color);
     width: 100%;
