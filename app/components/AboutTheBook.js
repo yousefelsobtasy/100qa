@@ -5,11 +5,16 @@ import { useState } from "react"
 const AboutTheBookl = () => {
     const [showMore, setShowMore] = useState(false)
     const pageNumbers = [
-        { pageNum: 2, url: "/p-2.jpg" },
-        { pageNum: 3, url: "/p-3.jpg" },
-        { pageNum: 4, url: "/p-4.jpg" },
-        { pageNum: 5, url: "/p-5.jpg" },
-        { pageNum: 6, url: "/p-6.jpg" },
+        { pageNum: 2, url: "/p-2.png" },
+        { pageNum: 3, url: "/p-3.png" },
+        { pageNum: 4, url: "/p-4.png" },
+        { pageNum: 5, url: "/p-5.png" },
+        { pageNum: 6, url: "/p-6.png" },
+        { pageNum: 36, url: "/p-36.png" },
+        { pageNum: 37, url: "/p-37.png" },
+        { pageNum: 38, url: "/p-38.png" },
+        { pageNum: 39, url: "/p-39.png" },
+        { pageNum: 40, url: "/p-40.png" },
     ]
     const url = "/p-1.jpg"
 
