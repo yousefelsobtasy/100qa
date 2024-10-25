@@ -720,7 +720,7 @@ footer {
     border-radius: var(--border-radius);
 
     & p:first-child {
-        font-size: 1rem;
+        font-size: 0.9rem;
         font-weight: bold;
         color: var(--text-color);
 
