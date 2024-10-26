@@ -148,8 +148,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-color: var(--secondary-color);
     position: fixed;
     top: 50%;
@@ -406,8 +406,75 @@ nav ul li a:hover {
     }
 }
 
+.indexOverlay {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000006e;
+    z-index: 1;
+}
 
-.progress {
+.indexImgContainer {
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+    overflow-y: scroll;
+    border-radius: var(--border-radius);
+}
+
+.indexImgContainer .closeBtn {
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #a50101;
+    color: var(--highlight-color);
+    border: none;
+}
+
+.indexImgContainer .indexImg {
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+}
+
+.contentHead {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    animation: fadeInUp 0.6s ease-in-out both;
+}
+
+.contentHead .indexBtnContainer button {
+    font-family: "Tajawal", sans-serif;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 100px;
+    font-size: .9rem;
+    font-weight: bold;
+    padding: 7px 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contentHead .indexBtnContainer button:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contentHead .progress {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -418,9 +485,10 @@ nav ul li a:hover {
     border-radius: 100px;
     text-align: center;
     animation: fadeInUp 0.6s ease-in-out both;
+    width: 100%;
 }
 
-.progressText {
+.contentHead .progressText {
     font-weight: bold;
     font-size: 1.2rem;
     color: var(--text-color);
@@ -435,7 +503,7 @@ nav ul li a:hover {
     }
 }
 
-.progressBar {
+.contentHead .progressBar {
     width: 80%;
     height: 10px;
     background-color: #adadad;
@@ -450,7 +518,7 @@ nav ul li a:hover {
     }
 }
 
-.progressBarInner {
+.contentHead .progressBarInner {
     display: block;
     height: 100%;
     width: 0;

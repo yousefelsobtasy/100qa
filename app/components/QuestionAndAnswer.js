@@ -8,8 +8,11 @@ import Loading from './Louding';
 
 // Lazy-loaded components with Suspense
 const ContentImgBtn = dynamic(() => import('@/app/components/ContentImgBtn'), { suspense: true });
+const Index = dynamic(() => import('@/app/components/Index'), { suspense: true });
+
 
 const QuestionAndAnswer = () => {
+    const [showIndex, setShowIndex] = useState(false);
     const [qaIndex, setqaIndex] = useState(() => (qa.length > 0 ? 0 : 4));
     const [qaData, setQaData] = useState(null); // State to store fetched question and answer
     const [input, setInput] = useState(qaIndex + 1); // Corrected to camelCase
@@ -30,12 +33,20 @@ const QuestionAndAnswer = () => {
 
     return (
         <div className='qaContent'>
+            {showIndex && <Index showIndex={showIndex} setShowIndex={setShowIndex} />}
             {qaData && (
                 <>
                     {/* Lazy-loaded components with suspense */}
-                    <div className='progress'>
-                        <p className='progressText'>{qa.length}/<span className={`questionId`}>{qaData.id}</span></p>
-                        <div className='progressBar'><span className='progressBarInner' style={{ width: `${qaData.id / qa.length * 100}%` }}></span></div>
+                    <div className={`contentHead`}>
+                        <div className={`indexBtnContainer`}>
+                            <button onClick={_ => setShowIndex(true)}>
+                                الفهرس
+                            </button>
+                        </div>
+                        <div className='progress'>
+                            <p className='progressText'>{qa.length}/<span className={`questionId`}>{qaData.id}</span></p>
+                            <div className='progressBar'><span className='progressBarInner' style={{ width: `${qaData.id / qa.length * 100}%` }}></span></div>
+                        </div>
                     </div>
                     <div className='questionAndAnswer'>
                         <div className='question'>{qaData.question}</div>
