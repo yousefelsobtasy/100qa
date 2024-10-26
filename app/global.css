@@ -683,6 +683,10 @@ nav ul li a:hover {
     }
 }
 
+.indexSelector input:focus {
+    outline: 1px solid var(--hover-color);
+}
+
 /* About Start  */
 .about {
     width: 100%;

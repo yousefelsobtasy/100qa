@@ -50,7 +50,7 @@ const QuestionAndAnswer = () => {
                     </div>
                     <div className='questionAndAnswer'>
                         <div className='question'>{qaData.question}</div>
-                        <div className='answer'>{qaData.answer}</div>
+                        {qaData.answer && <div className='answer'>{qaData.answer}</div>}
                         {qaData.ayaAnswer && <div className='ayaAnswer'>{qaData.ayaAnswer}</div>}
                     </div>
 
@@ -66,7 +66,7 @@ const QuestionAndAnswer = () => {
                             dir="ltr"
                             type="text"
                             value={input}
-                            onChange={(e) => setInput(Number(e.target.value))} // Ensure input is converted to a number
+                            onChange={(e) => setInput(e.target.value)} // Ensure input is converted to a number
                             onKeyDown={(e) => {
                                 if (e.key === 'Enter' && Number(input) > 0 && Number(input) <= qa.length) {
                                     setqaIndex(Number(input) - 1);
