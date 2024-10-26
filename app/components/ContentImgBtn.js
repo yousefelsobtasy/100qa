@@ -30,15 +30,26 @@ const ContentImg = ({ qaData, showContent, setShowContent, content }) => {
                 >
                     <IoClose fontSize={20} />
                 </button>
-                <Image
-                    className='contentImg'
-                    src={content === "aya" ? qaData.ayaImgAnswer : qaData.qaImg}
-                    alt={`Image ${content === "aya" ? 'aya img' : 'qa img'}`}
-                    width={800}
-                    height={600}
-                    layout="responsive"
-                    priority={true}
-                />
+                {content === "aya" && (qaData.id === 7) ?
+                    qaData.ayaImgAnswer.map(imgSrc => (
+                        <Image
+                            className='contentImg'
+                            src={imgSrc}
+                            alt={`Image 'aya img' `}
+                            width={800}
+                            height={600}
+                            layout="responsive"
+                            priority={true}
+                        />))
+                    : <Image
+                        className='contentImg'
+                        src={content === "aya" ? qaData.ayaImgAnswer : qaData.qaImg}
+                        alt={`Image ${content === "aya" ? 'aya img' : 'qa img'}`}
+                        width={800}
+                        height={600}
+                        layout="responsive"
+                        priority={true}
+                    />}
             </div>
         </div>
     );
