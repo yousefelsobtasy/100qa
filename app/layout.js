@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body dir="rtl" >
         <News />
-        <div className="betaMessage">الموقع جاهز للهاتف فقط حالياً</div>
+        <div className="betaMessage">الموقع جاهز للهاتف والتابلت فقط حالياً</div>
         {/* <Logo /> */}
         {children}
       </body>
