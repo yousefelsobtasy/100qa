@@ -30,7 +30,7 @@ const ContentImg = ({ qaData, showContent, setShowContent, content }) => {
                 >
                     <IoClose fontSize={20} />
                 </button>
-                {content === "aya" && (qaData.id === 7) ?
+                {content === "aya" && (qaData.id === 7 || qaData.id === 30) ?
                     qaData.ayaImgAnswer.map(imgSrc => (
                         <Image
                             className='contentImg'
