@@ -41,7 +41,7 @@
 
 @media (max-width:640px) {
     :root {
-        font-size: 16px;
+        font-size: 19px;
     }
 
 }
@@ -87,14 +87,20 @@
     display: grid;
     place-items: center;
     gap: 30px;
-    width: 300px;
-    padding: 30px 10px;
+    width: 85%;
+    padding: 30px 20px;
     background-color: var(--secondary-color);
     color: var(--text-color);
     line-height: 100%;
     font-size: 1.2rem;
     font-weight: bold;
     border-radius: var(--border-radius);
+}
+
+@media (max-width:640px) {
+    .newsOverlay .news {
+        padding: 15px 10px;
+    }
 }
 
 .newsOverlay .news .newsText {
@@ -281,7 +287,7 @@ body:has(.loadingContainer) {
 /* Navbar Styling */
 nav {
     background-color: rgb(255, 255, 255, .4);
-    padding: 5px 20px;
+    padding: 8px;
     border-radius: 100px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -292,7 +298,11 @@ nav {
     z-index: 100;
 
     @media (max-width:1024px) {
-        width: 65%;
+        width: 45%;
+    }
+
+    @media (max-width:768px) {
+        width: 50%;
     }
 
     @media (max-width:768px) {
@@ -309,9 +319,17 @@ nav ul {
     padding: 0;
 }
 
-/* nav ul li {
-    margin: 0 20px;
-    } */
+nav ul li {
+    padding: 7px 5px 2px;
+    border-radius: 100px;
+    transition: all 0.3s ease;
+}
+
+
+nav ul li:hover {
+    /* color: var(--secondary-color); */
+    background-color: var(--secondary-color);
+}
 
 nav ul li a {
     text-decoration: none;
@@ -321,80 +339,12 @@ nav ul li a {
     padding: 4px 8px;
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 3px;
-    border-radius: 100px;
-    transition: all 0.3s ease;
-}
-
-
-nav ul li a:hover {
-    /* color: var(--secondary-color); */
-    background-color: var(--secondary-color);
 }
 
 .navIcon {
     display: none;
 }
-
-/* Responsive Styles for Navbar */
-/* @media (max-width: 768px) {
-    .navIcon {
-        display: block;
-        font-size: 2rem;
-        color: var(--highlight-color);
-        position: absolute;
-        left: 15px;
-        top: 20px;
-        cursor: pointer;
-        z-index: 101;
-        display: grid;
-        place-items: center;
-        border-radius: var(--border-radius);
-        background-color: var(--primary-color);
-    }
-
-    .navIcon.active {
-        background-color: var(--highlight-color);
-    }
-
-    .navIcon svg {
-        background-color: var(--primary-color);
-        margin: 5px;
-    }
-
-    .navIcon.active svg {
-        background-color: var(--highlight-color);
-        color: black;
-        margin: 5px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 250px;
-        height: 100vh;
-        background-color: var(--primary-color);
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 100px 20px;
-        transition: left 0.3s ease;
-    }
-
-    nav ul.show {
-        left: 0;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    nav ul li a {
-        font-size: 1rem;
-    }
-} */
 
 /* QA Content Styling */
 
@@ -469,7 +419,7 @@ nav ul li a:hover {
     border-radius: 100px;
     font-size: .9rem;
     font-weight: bold;
-    padding: 7px 10px;
+    padding: 15px 10px 10px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
@@ -499,6 +449,7 @@ nav ul li a:hover {
     font-size: 1rem;
     color: var(--text-color);
     width: 20%;
+    padding-top: 8px;
 }
 
 .contentHead .progressBar {
@@ -569,7 +520,7 @@ nav ul li a:hover {
     color: var(--secondary-color);
     border: none;
     border-radius: 100px;
-    padding: 5px 10px;
+    padding: 15px 10px 10px;
     font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
@@ -672,13 +623,14 @@ nav ul li a:hover {
 .indexSelector input {
     font-family: 'Tajawal', sans-serif;
     text-align: center;
-    padding: 5px 6px;
+    padding: 15px 5px 6px;
     border: 2px solid var(--primary-color);
     border-radius: 100px;
     outline: none;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 
-    @media (max-width:768px) {
+    @media (max-width:640px) {
+        padding-bottom: 10px;
         max-width: 120px;
         font-size: 1.2rem;
     }
