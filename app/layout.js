@@ -23,10 +23,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body dir="rtl" >
-        <News />
-        <div className="betaMessage">الموقع جاهز للهاتف والتابلت فقط حالياً</div>
-        {/* <Logo /> */}
-        {children}
+        <div className="container">
+          <News />
+          <div className="betaMessage">الموقع جاهز للهاتف والتابلت فقط حالياً</div>
+          {/* <Logo /> */}
+          {children}
+        </div>
       </body>
     </html>
   );
