@@ -69,7 +69,7 @@ const ContentImgBtn = ({ qaData, content }) => {
                 onClick={() => setShowContent(prev => !prev)}
                 aria-expanded={showContent}
                 aria-controls={`aya-img-${qaData.id}`}
-                style={{ visibility: (content === "aya" ? qaData.ayaImgAnswer : qaData.qaImg) ? "visible" : "hidden" }}
+                style={{ display: (content === "aya" ? qaData.ayaImgAnswer : qaData.qaImg) ? "visible" : "hidden" }}
             >
                 {content === "aya" ? 'عرض تفسير الأية ( التفسير المُيسَّر )' : 'عرض صورة السؤال والجواب'}
             </button>
