@@ -228,7 +228,7 @@ export const qa = [
 
         id: 29,
         "question": "س / لمن نذبح ونصلي ؟",
-        "answer": "ج / الله وحده لا شَرِيكَ لهُ ، قَالَ تَعَالَى : ",
+        "answer": "ج / لله وحده لا شَرِيكَ لهُ ، قَالَ تَعَالَى : ",
         "ayaAnswer": "{ فَصَلِ لِرَبِّكَ وَانْحَر } ( الكوثر : 2 )  .",
         "ayaImgAnswer": "/img-answer-29.png",
         "qaImg": "/qa-29.png"
@@ -323,6 +323,22 @@ export const qa = [
         "ayaAnswer": "",
         "ayaImgAnswer": "",
         "qaImg": "/qa-40.png"
+    }, {
+
+        id: 41,
+        "question": "س / ما حكم الإيمان بالملائكة ؟",
+        "answer": "ج / وَاجِبٌ لَا يُقْبَلُ الإِيمَانُ إِلَّا بِهِ ",
+        "ayaAnswer": "",
+        "ayaImgAnswer": "",
+        "qaImg": "/qa-41.png"
+    }, {
+
+        id: 42,
+        "question": "س / من أفضل الملائكة ؟",
+        "answer": "ج / جَبْرِيلُ عَلَيْهِ السَّلَامُ، وَهُوَ المُوَكَّلُ بِإِنزَالِ الْوَحْيِ .",
+        "ayaAnswer": "",
+        "ayaImgAnswer": "",
+        "qaImg": "/qa-42.png"
     }
 
 ]

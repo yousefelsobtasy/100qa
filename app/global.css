@@ -150,9 +150,9 @@ button {
 }
 
 @media (min-width:1024px) {
-    /* .betaMessage {
+    .betaMessage {
         display: flex;
-    } */
+    }
 }
 
 .overlay {
@@ -226,8 +226,10 @@ body {
 }
 
 body:has(.newsOverlay.show),
-body:has(.loadingContainer) {
-    overflow: hidden;
+body:has(.loadingContainer),
+body:has(.overlay.show),
+body:has(.indexOverlay) {
+    /* overflow: hidden; */
 }
 
 .container {
@@ -378,12 +380,12 @@ nav ul li a {
 .indexOverlay {
     display: grid;
     place-items: center;
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     background-color: #0000006e;
     z-index: 1;
 }
@@ -555,6 +557,7 @@ nav ul li a {
     position: relative;
     max-width: 80%;
     max-height: 80%;
+    overflow-y: scroll;
 }
 
 @media (min-width:640px) {
@@ -571,9 +574,8 @@ nav ul li a {
 
 .contentImgContainer .closeBtn {
     cursor: pointer;
-    position: absolute;
-    top: 0px;
-    right: -35px;
+    position: sticky;
+    top: 0;
     width: 30px;
     height: 30px;
     border-radius: 30px;

@@ -35,7 +35,7 @@ const ContentImg = ({ qaData, showContent, setShowContent, content }) => {
                         <Image
                             className='contentImg'
                             src={imgSrc}
-                            alt={`Image 'aya img' `}
+                            alt={`Image aya img `}
                             width={800}
                             height={600}
                             layout="responsive"
@@ -44,7 +44,7 @@ const ContentImg = ({ qaData, showContent, setShowContent, content }) => {
                     : <Image
                         className='contentImg'
                         src={content === "aya" ? qaData.ayaImgAnswer : qaData.qaImg}
-                        alt={`Image ${content === "aya" ? 'aya img' : 'qa img'}`}
+                        alt={`Image qa img`}
                         width={800}
                         height={600}
                         layout="responsive"
@@ -69,7 +69,7 @@ const ContentImgBtn = ({ qaData, content }) => {
                 onClick={() => setShowContent(prev => !prev)}
                 aria-expanded={showContent}
                 aria-controls={`aya-img-${qaData.id}`}
-                style={{ display: (content === "aya" ? qaData.ayaImgAnswer : qaData.qaImg) ? "visible" : "hidden" }}
+                style={{ display: (content === "aya" ? qaData.ayaImgAnswer : qaData.qaImg) ? "block" : "none" }}
             >
                 {content === "aya" ? 'عرض تفسير الأية ( التفسير المُيسَّر )' : 'عرض صورة السؤال والجواب'}
             </button>
