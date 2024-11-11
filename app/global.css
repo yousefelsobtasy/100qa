@@ -151,7 +151,7 @@ button {
 
 @media (min-width:1024px) {
     .betaMessage {
-        display: flex;
+        /* display: flex; */
     }
 }
 
@@ -167,6 +167,19 @@ button {
     justify-content: center;
     align-items: center;
 }
+
+@media (max-width:640px) {
+    .overlay {
+        height: 120vh;
+    }
+}
+
+@media (max-width:350px) {
+    .overlay {
+        height: 155vh;
+    }
+}
+
 
 .overlay.show {
     display: flex;
@@ -229,7 +242,7 @@ body:has(.newsOverlay.show),
 body:has(.loadingContainer),
 body:has(.overlay.show),
 body:has(.indexOverlay) {
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .container {
@@ -390,6 +403,18 @@ nav ul li a {
     z-index: 1;
 }
 
+@media (max-width:640px) {
+    .indexOverlay {
+        height: 120vh;
+    }
+}
+
+@media (max-width:350px) {
+    .indexOverlay {
+        height: 155vh;
+    }
+}
+
 .indexImgContainer {
     position: relative;
     max-width: 80%;
@@ -506,6 +531,7 @@ nav ul li a {
     overflow-y: scroll;
     scrollbar-width: none;
     mask-image: linear-gradient(to top, transparent 0%, black 20%, black 100%);
+    height: 100vh;
 }
 
 .question {
@@ -562,7 +588,7 @@ nav ul li a {
 
 @media (min-width:640px) {
     .contentImgContainer {
-        max-width: 60%;
+        max-width: 350px;
     }
 }
 
