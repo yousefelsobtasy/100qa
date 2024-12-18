@@ -57,7 +57,6 @@ const QuestionAndAnswer = () => {
                     <div className='contentImgBtnContainer'>
                         <ContentImgBtn qaData={qaData} content={`aya`} />
                         <ContentImgBtn qaData={qaData} content={`qa`} />
-
                     </div>
                     <div className={`indexSelector`}>
                         <button aria-label="Previous Question" onClick={() => { setqaIndex((prevIndex) => (prevIndex - 1 + qa.length) % qa.length) }}>
