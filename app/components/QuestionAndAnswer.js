@@ -32,7 +32,7 @@ const QuestionAndAnswer = () => {
     }
 
     return (
-        <div className='qaContent'>
+        <div className='qaContent fadeInUp-2'>
             {showIndex && <Index showIndex={showIndex} setShowIndex={setShowIndex} />}
             {qaData && (
                 <>
@@ -54,11 +54,11 @@ const QuestionAndAnswer = () => {
                         {qaData.ayaAnswer && <div className='ayaAnswer'>{qaData.ayaAnswer}</div>}
                     </div>
 
-                    <div className='contentImgBtnContainer'>
+                    <div className='contentImgBtnContainer fadeInUp-3'>
                         <ContentImgBtn qaData={qaData} content={`aya`} />
                         <ContentImgBtn qaData={qaData} content={`qa`} />
                     </div>
-                    <div className={`indexSelector`}>
+                    <div className={`indexSelector fadeInUp-3`}>
                         <button aria-label="Previous Question" onClick={() => { setqaIndex((prevIndex) => (prevIndex - 1 + qa.length) % qa.length) }}>
                             <FaChevronRight />
                         </button>

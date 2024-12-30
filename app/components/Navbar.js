@@ -4,12 +4,13 @@ import Link from 'next/link';
 import { IoIosInformationCircle } from 'react-icons/io';
 import { FaHome, FaBars, FaPlay } from 'react-icons/fa';
 import { usePathname } from 'next/navigation'; // Import usePathname
+import { LuInfo } from "react-icons/lu";
 
 const Navbar = () => {
     const pathname = usePathname(); // Get the current pathname
 
     return (
-        <nav>
+        <nav className='fadeInUp-1'>
             <ul >
                 {/* Only show Home link if not on the Home page */}
                 {pathname !== '/' && (

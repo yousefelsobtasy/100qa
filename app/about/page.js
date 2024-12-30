@@ -2,19 +2,22 @@ import Navbar from "../components/Navbar"
 import AboutTheBook from "../components/AboutTheBook"
 import Contact from "../components/Contact"
 import Footer from "../components/Footer"
+import NewsIcon from "../components/NewsIcon"
 
 
 export const metadata = { title: '100qa - عن الموقع' }
 
 const page = () => {
-    return (<>
-        <Navbar />
-        <div className="about">
-            <AboutTheBook />
-            <Contact />
-            <Footer />
-        </div>
-    </>
+    return (
+        <>
+            <NewsIcon />
+            <Navbar />
+            <div className="about fadeInUp-2">
+                <AboutTheBook />
+                <Contact />
+                <Footer />
+            </div>
+        </>
     )
 }
 

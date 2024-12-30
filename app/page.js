@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Page = () => {
     return (
-        <main className="welcome">
+        <main className="welcome fadeInUp-1">
             <h1>أهلا وسهلا</h1>
             <p>
                 هذا الموقع من أجل إعطائك سؤال وجواب عن العقيدة فهذه أسئلة وأجوبتها في أصل الأصول توحيد الله سبحانه

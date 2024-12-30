@@ -55,6 +55,21 @@ button {
 }
 
 /* Animations Start */
+
+.fadeInUp-1 {
+    animation: var(---fadeInUp-animation);
+}
+
+.fadeInUp-2 {
+    animation: var(---fadeInUp-animation);
+    animation-delay: .3s;
+}
+
+.fadeInUp-3 {
+    animation: var(---fadeInUp-animation);
+    animation-delay: .5s;
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -68,6 +83,19 @@ button {
 }
 
 /* Animations End */
+.newsIcon {
+    width: fit-content;
+    padding: 10px;
+    background: var(--secondary-color);
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+}
+
 .newsOverlay {
     display: none;
     place-items: center;
@@ -126,9 +154,6 @@ button {
     font-weight: bold;
     cursor: pointer;
 }
-
-
-
 
 .betaMessage {
     position: absolute;
@@ -263,7 +288,6 @@ body:has(.indexOverlay) {
     border-radius: var(--border-radius);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
-    animation: var(---fadeInUp-animation);
 }
 
 .welcome h1 {
@@ -387,7 +411,6 @@ nav ul li a {
     display: flex;
     flex-flow: column;
     gap: 1rem;
-    animation: var(---fadeInUp-animation);
 }
 
 .indexOverlay {
@@ -702,8 +725,6 @@ nav ul li a {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    animation: var(---fadeInUp-animation);
-
 }
 
 

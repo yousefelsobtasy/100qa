@@ -1,33 +1,19 @@
 'use client'
 import Link from "next/link"
-import { useEffect, useState } from 'react'
-import Loading from "../Louding"
-import { FaWhatsappSquare } from "react-icons/fa"
+import { useNewsOpenStore } from "@/app/store/useNewsOpenStore"
 
 const News = () => {
-    const [news, setNews] = useState(false)
-    const [loading, setLoading] = useState(true); // Loading state for data fetch
+    const { newsOpen, showHide } = useNewsOpenStore()
 
-    useEffect(() => {
-        if (localStorage.getItem('isNewsReaded') === 'true') {
-            setNews(true)
-        }
-        setLoading(false);
-    }, [])
-
-    function handleIsNewsReaded() {
-        setNews(true)
-        localStorage.setItem('isNewsReaded', 'true')
-    }
-
-    if (loading) {
-        return <Loading />; // Display loading spinner when data is being fetched
-    }
     return (
-        <div className={`newsOverlay ${news ? "" : "show"}`}
-            onClick={handleIsNewsReaded}
+        <div
+            className={`newsOverlay ${newsOpen ? "show" : ""}`}
+            onClick={showHide}
         >
-            <div className="news">
+            <div
+                className="news fadeInUp-1"
+                onClick={(e) => e.stopPropagation()}
+            >
                 <div className="newsText">
                     روابط التواصل الإجتماعي في صفحة
                     <Link href={"/about"}>
@@ -45,7 +31,7 @@ const News = () => {
                     يرجى العلم بأن الصفحة يتم تحديثها يومياً تقريباً
                 </div>
                 <button
-                    onClick={handleIsNewsReaded}
+                    onClick={showHide}
                 >
                     حسناً
                 </button>
