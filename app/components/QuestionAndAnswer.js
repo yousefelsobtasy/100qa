@@ -55,7 +55,7 @@ const QuestionAndAnswer = () => {
                     </div>
 
                     <div className='contentImgBtnContainer fadeInUp-3'>
-                        <ContentImgBtn qaData={qaData} content={`aya`} />
+                        {qaData.ayaImgAnswer.length > 0 && <ContentImgBtn qaData={qaData} content={`aya`} />}
                         <ContentImgBtn qaData={qaData} content={`qa`} />
                     </div>
                     <div className={`indexSelector fadeInUp-3`}>
