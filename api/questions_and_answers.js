@@ -525,3 +525,5 @@ export const qa = [
     }
 
 ]
+
+export const qaLength = qa.length;

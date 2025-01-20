@@ -1,16 +1,22 @@
 'use client';
 
-import { useNewsOpenStore } from "../store/useNewsOpenStore"
+import { overlayStore } from "@/app/stores/overlayStore"
 import { FaRegNewspaper } from 'react-icons/fa'
 
 const NewsIcon = () => {
-    const { showHide } = useNewsOpenStore();
+
+    const { setIsOpen, setOverlayContent } = overlayStore()
+
+    const handleOnClick = () => {
+        setIsOpen(true)
+        setOverlayContent('news')
+    }
 
     return (
         <div
             className="newsIcon fadeInUp-1"
             role="button"
-            onClick={showHide}
+            onClick={handleOnClick}
         >
             <FaRegNewspaper />
         </div>

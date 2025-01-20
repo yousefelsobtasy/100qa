@@ -1,15 +1,12 @@
 'use client'
 import Link from "next/link"
-import { useNewsOpenStore } from "@/app/store/useNewsOpenStore"
+import { overlayStore } from "@/app/stores/overlayStore"
 
 const News = () => {
-    const { newsOpen, showHide } = useNewsOpenStore()
+    const { setIsOpen } = overlayStore()
 
     return (
-        <div
-            className={`newsOverlay ${newsOpen ? "show" : ""}`}
-            onClick={showHide}
-        >
+        <>
             <div
                 className="news fadeInUp-1"
                 onClick={(e) => e.stopPropagation()}
@@ -31,12 +28,12 @@ const News = () => {
                     يرجى العلم بأن الصفحة يتم تحديثها يومياً تقريباً
                 </div>
                 <button
-                    onClick={showHide}
+                    onClick={() => setIsOpen(false)}
                 >
                     حسناً
                 </button>
             </div>
-        </div>
+        </>
     )
 }
 

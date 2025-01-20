@@ -1,9 +1,9 @@
 
-import localFont from "next/font/local";
 import '@/app/global.css'
-import Logo from '@/app/components/Logo'
-import News from '@/app/components/News'
 import Head from "next/head";
+import localFont from "next/font/local";
+import Logo from '@/app/components/Logo'
+import ContentOverlay from '@/app/components/ContentOverlay'
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -26,9 +26,9 @@ export default function RootLayout({ children }) {
         <meta name="description" content="view questino and answer every day" />
       </Head>
       <body dir="rtl" >
+        <ContentOverlay />
         <div className="container">
-          <News />
-          <div className="betaMessage">الموقع جاهز للهاتف والتابلت فقط حالياً</div>
+          {/* <div className="betaMessage">الموقع جاهز للهاتف والتابلت فقط حالياً</div> */}
           {children}
         </div>
       </body>

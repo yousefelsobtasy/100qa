@@ -1,28 +1,21 @@
+'use client';
+import { overlayStore } from "@/app/stores/overlayStore";
 import Image from "next/image"
 import { IoClose } from "react-icons/io5";
 
-export default function Index({ showIndex, setShowIndex }) {
+export default function QuestionsIndex() {
+    const { setIsOpen } = overlayStore()
     const indexPages = [36, 37, 38, 39, 40]
 
-    const handleKeyDown = (e) => {
-        if (e.key === 'Escape') {
-            setShowContent(false);
-        }
-    };
-
     return (
-        <div
-            className={`indexOverlay`}
-            onClick={() => setShowIndex(false)}
-            onKeyDown={handleKeyDown}
-        >
+        <>
             <div
                 className={`indexImgContainer`}
                 onClick={(e) => e.stopPropagation()}
             >
                 <button
                     className="closeBtn"
-                    onClick={() => setShowIndex(false)}
+                    onClick={() => setIsOpen(false)}
                 >
                     <IoClose fontSize={20} />
                 </button>
@@ -38,6 +31,6 @@ export default function Index({ showIndex, setShowIndex }) {
                     />
                 ))}
             </div>
-        </div>
+        </>
     )
 }
