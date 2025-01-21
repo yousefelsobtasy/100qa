@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BookCoverButton from "@/app/components/BookCoverButton";
 
 const Page = () => {
     return (
@@ -9,6 +10,7 @@ const Page = () => {
                 ، والتحذير من ضده وهو الشرك بالله ووسائله
             </p>
             <div className="button-container">
+                <BookCoverButton />
                 <Link href='/questionsAndAnswers'>
                     <button className="cta-button">لنبدأ</button>
                 </Link>

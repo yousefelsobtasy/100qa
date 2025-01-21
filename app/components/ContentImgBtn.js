@@ -13,7 +13,6 @@ const ContentImgBtn = ({ currentQuestion, content }) => {
 
     return (
         <>
-            {/* Button to show Aya Image */}
             <button
                 className={`contentImgBtn`}
                 onClick={handleSettingContentType}
