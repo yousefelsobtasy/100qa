@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import Logo from '@/app/components/Logo'
 import ContentOverlay from '@/app/components/ContentOverlay'
 
+
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
 //   variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
         <div className="container">
           {/* <div className="betaMessage">الموقع جاهز للهاتف والتابلت فقط حالياً</div> */}
           {children}
+
         </div>
       </body>
     </html>

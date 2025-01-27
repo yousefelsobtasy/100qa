@@ -63,7 +63,7 @@ const page = () => {
           </div>
 
           <div className='contentImgBtnContainer fadeInUp-3'>
-            {currentQuestion.ayaImgAnswer.length > 0 && <ContentImgBtn currentQuestion={currentQuestion} content={`aya`} />}
+            {currentQuestion?.ayaImgAnswer?.length > 0 && <ContentImgBtn currentQuestion={currentQuestion} content={`aya`} />}
             <ContentImgBtn currentQuestion={currentQuestion} content={`qa`} />
           </div>
           <div className={`indexSelector fadeInUp-3`}>

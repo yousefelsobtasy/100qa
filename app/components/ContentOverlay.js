@@ -38,7 +38,7 @@ const ContentOverlay = ({ }) => {
                 <IoClose fontSize={20} />
             </button>
             <div
-                className='relative max-w-[80%] max-h-[80%] overflow-y-scroll rounded-xl  '
+                className='relative max-w-[80%] max-h-[80%] overflow-y-scroll rounded-xl scrollbar-w-none'
                 onClick={(e) => e.stopPropagation()}
             >
 
