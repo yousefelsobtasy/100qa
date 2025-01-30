@@ -1,6 +1,5 @@
 
 import '@/app/global.css'
-import Head from "next/head";
 import localFont from "next/font/local";
 import Logo from '@/app/components/Logo'
 import ContentOverlay from '@/app/components/ContentOverlay'
@@ -18,14 +17,15 @@ import ContentOverlay from '@/app/components/ContentOverlay'
 // });
 
 
+export const metadata = {
+  title: '100qa',
+  description: "view questino and answer every day",
+  viewport: "width=device-width, initial-scale=1.0",
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        <title>100qa</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="view questino and answer every day" />
-      </Head>
       <body dir="rtl" >
         <ContentOverlay />
         <div className="container">

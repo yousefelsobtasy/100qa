@@ -9,22 +9,28 @@
 
 :root {
     --primary-color: #3498db;
-    /* Soft Blue */
     --secondary-color: #ecf0f1;
-    /* Light Grey */
     --text-color: #2c3e50;
-    /* Dark Blue */
     --highlight-color: #ffffff;
-    /* White */
     --bg-color: var(--secondary-color);
-    --font-size-medium: clamp(1.5rem, 6vw, 4rem);
-    --box-shadow-color: rgba(52, 152, 219, 0.5);
     --hover-color: #0077B6;
-    /* Adjusted hover color */
-    /* Darker Blue */
     --border-radius: 15px;
     ---fadeInUp-animation: fadeInUp 0.6s ease-in-out both;
     scrollbar-width: thin;
+}
+
+.dark {
+    --primary-color: #1abc9c;
+    --secondary-color: #34495e;
+    --text-color: #ecf0f1;
+    --highlight-color: #2c3e50;
+    --bg-color: var(--secondary-color);
+    --hover-color: #16a085;
+}
+
+:root,
+.dark {
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* @media (max-width:1024px) {
@@ -333,12 +339,6 @@ body {
 
 /* Navbar Styling */
 nav {
-    background-color: rgb(255, 255, 255, .4);
-    padding: 8px;
-    border-radius: 100px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin: 0 auto 20px;
     width: 50%;
 
     @media (max-width:768px) {
@@ -692,29 +692,7 @@ progress::-webkit-progress-value {
     }
 }
 
-
-.contact {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: var(--border-radius);
-    font-size: 1rem;
-    line-height: 100%;
-}
-
-.contact .contactText {
-    display: flex;
-    gap: 5px;
-}
-
-.contact .contactText>svg {
-    transform: rotate(180deg);
-}
-
-.contact .socialLinks svg {
+.socialLinks svg {
     color: black;
     margin: 0 10px;
     font-size: 1.3rem;
